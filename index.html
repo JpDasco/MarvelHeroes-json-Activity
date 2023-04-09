@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta brand="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/marvelIcon.png" />
+    <title>Marvel Heroes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-5">MARVEL HEROES</h2>
+        <div class="row" id="demo"></div>
+    </div>
+
+    <script>
+        var txt = "";
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let heroes = JSON.parse(this.responseText);
+                console.log(heroes);
+                let txt = "";
+                let user = "";
+
+                for(i = 0; i < heroes.length;i++){
+                    txt += `
+                        <div class="col-md-7 mb-5">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-5">
+                                        <img class="card-img img-fluid" src="images/${heroes[i].img}" alt="">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h2 class="card-title mb-4">${heroes[i].hero_name}</h2>
+                                            <p class="card-text"><b>Civilian Name:</b> ${heroes[i].civilian_name}</p>
+                                            <p class="card-text"><b>Origin:</b> ${heroes[i].origin}</p>
+                                            <p class="card-text"><b>Greatest Enemy:</b> ${heroes[i].greatest_enemy}</p>
+                                            <p class="card-text"><b>Power Source:</b> ${heroes[i].power_source}</p>
+                                            <p class="card-text"><b>Abilities:</b></p>         
+                                            <ul class="">`;
+                                                for(j = 0; j < heroes[i].abilities.length; j++){
+                                                    txt += `
+                                                        <li class="">${heroes[i].abilities[j]}</li>
+                                                    `;
+                                                }
+                                                txt += `
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        }
+        xmlhttp.open("GET", "http://test.test/MarvelHeroes-json-Activity/php/MarvelHeroes.php");
+        xmlhttp.send();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
