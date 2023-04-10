@@ -1,7 +1,7 @@
 body {
     background-image: url("images/BackgroundImage.jpg");
     background-size: 100%;
-    color: #333;
+    color: #1a1919;
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -18,7 +18,7 @@ body {
   /* heading styles */
   h2 {
     font-family: 'Arial Black';
-    color: #333;
+    color: #1a1919;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
@@ -27,6 +27,7 @@ body {
   
   /* card styles */
   .card {
+    background-color: rgba(218, 218, 218, 0.836); /* sets the background color to white with 50% opacity */
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
