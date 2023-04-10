@@ -9,7 +9,7 @@
             "origin" => "Queens, New york city, USA",
             "greatest_enemy" => "The Green Goblin",
             "power_source" => "Radioactive Spider",
-            "abilities" => ["super human strength","Spidey sense","Web shooter","Wall crawling"]
+            "abilities" => ["Super human strength","Spidey sense","Web shooter","Wall crawling"]
         ],
         [
             "img" => "ironman.jpg",
@@ -21,13 +21,13 @@
             "abilities" => ["Artificial intelligence","Armored suit","Array of weapons","Flight"]
         ],
         [
-            "img" => "captainamerica.jpg",
-            "hero_name" => "Captain America",
-            "civilian_name" => "Steve Rogers",
-            "origin" => "Brooklyn, New York City, USA",
-            "greatest_enemy" => "Red Skull",
-            "power_source" => "Super Soldier Serum",
-            "abilities" => ["Can wield the Vibranium shield","Super human speed and stamina","Skilled fighter","Acrobat"]
+            "img" => "Thor.jpg",
+            "hero_name" => "Thor",
+            "civilian_name" => "Thor Odinson",
+            "origin" => "Asgard",
+            "greatest_enemy" => "Loki",
+            "power_source" => "Golden Apples of Idunn",
+            "abilities" => ["God of thunder","Can Summon mjolnir","Can Wield Storm breaker","Flight"]
         ],
         [
             "img" => "hulk.jpg",
@@ -39,13 +39,13 @@
             "abilities" => ["Super human strength","Long distance jumping","Durability","Regeneration"]
         ],
         [
-            "img" => "Thor.jpg",
-            "hero_name" => "Thor",
-            "civilian_name" => "Thor Odinson",
-            "origin" => "Asgard",
-            "greatest_enemy" => "Loki",
-            "power_source" => "Golden Apples of Idunn",
-            "abilities" => ["God of thunder","Summon mjolnir","Can Wield Storm breaker and the bifrost","Flight"]
+            "img" => "captainamerica.jpg",
+            "hero_name" => "Captain America",
+            "civilian_name" => "Steve Rogers",
+            "origin" => "Brooklyn, New York City, USA",
+            "greatest_enemy" => "Red Skull",
+            "power_source" => "Super Soldier Serum",
+            "abilities" => ["Can wield the Vibranium shield","Enhanced speed and stamina","Skilled fighter","Acrobat"]
         ],
         [   
             "img" => "blackpanther.jpg",
@@ -61,5 +61,5 @@
 
     $data = json_encode($heroes);
     echo $data;
-    
+     
 ?>
