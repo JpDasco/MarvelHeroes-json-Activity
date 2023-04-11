@@ -11,8 +11,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h2 class="text-center mb-5">MARVEL HEROES</h2>
+    <div class="logo">
+        <img src="/images/homelogo.png" alt="marvel logo">
+    </div> 
+    <div class="container">     
+        <h2 class="text-center mb-5"></h2>  
         <div class="row" id="demo"></div>
     </div>
 
@@ -21,10 +24,9 @@
         const xmlhttp = new XMLHttpRequest();
         xmlhttp.onload = function() {
             if (this.readyState == 4 && this.status == 200) {
-                let heroes = JSON.parse(this.responseText);
+                let heroes = JSON.parse(this.responseText);             
                 console.log(heroes);
                 let txt = "";
-                let user = "";
 
                 for(i = 0; i < heroes.length;i++){
                     txt += `
